@@ -1,1 +1,3 @@
+
 print("Hello, i'm starting my Git journey")
+print("Day 1 of becoming a real developer")
