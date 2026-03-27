@@ -1,3 +1,32 @@
-
-print("Hello, i'm starting my Git journey")
-print("Day 1 of becoming a real developer")
+tasks = []
+def show_tasks:
+	if not tasks:
+		print("No tasks yet")
+	else:
+		for i, task in enumerate(tasks,1):
+		print(f"{i}. {task}")
+def add_task():
+	task = input("Enter a task: ")
+	tasks.append(task)
+	print("Tasks added!")
+def delete_task():
+	show_tasks()
+	task_num = int(input("Enter task number to delete: "))
+	if 1 <= task_num <= len(tasks):
+		removed = tasks.pop(task_num - 1)
+		print(f"Removed: {removed}")
+	else:
+		print("Invalid number!")
+while True:
+	print("\nOptions: show / add / delete / exit")
+	choice = input("Choose: ").lower()
+	if choice == "show":
+		show_tasks()
+	elif choice == "add":
+		add_tasks()
+	elif choice == "delete":
+		delete_tasks()
+	elif choice == "exit":
+		break
+	else:
+		print("Invalid Option!")
